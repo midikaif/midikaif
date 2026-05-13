@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=JetBrains+Mono:wght@400;500&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Playfair Display", ui-serif, Georgia, serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+  
+  --color-brand-bg: #f8f8fa;
+  --color-brand-text: #1a1a1a;
+  --color-brand-accent: #d4ff33;
+  --color-brand-divider: rgba(26, 26, 26, 0.1);
+  
+  --color-dark-bg: #0a0a0a;
+  --color-dark-text: #f5f5f5;
+  --color-dark-text-muted: rgba(245, 245, 245, 0.6);
+  --color-dark-divider: rgba(245, 245, 245, 0.1);
+
+  --color-impact-bg: #fdf8f5;
+  --color-impact-text: #1a1a1a;
+}
+
+@layer base {
+  body {
+    @apply bg-brand-bg text-brand-text font-sans antialiased selection:bg-brand-accent selection:text-brand-text;
+  }
+}
+
+@layer utilities {
+  .text-reveal {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+  }
+}
