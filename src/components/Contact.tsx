@@ -354,7 +354,7 @@ export default function Contact() {
               <h4 className="text-[10px] font-black uppercase tracking-[0.4em] text-gray-500">Direct Message</h4>
               <a 
                 href="mailto:mdkaif0153@gmail.com" 
-                className="block text-3xl md:text-5xl font-bold tracking-tighter hover:text-red-600 transition-colors break-words leading-tight"
+                className="block text-2xl md:text-3xl lg:text-4xl font-bold tracking-tighter hover:text-red-600 transition-colors lg:whitespace-nowrap leading-tight"
               >
                 mdkaif0153@gmail.com
               </a>

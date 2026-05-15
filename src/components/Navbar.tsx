@@ -25,7 +25,7 @@ export default function Navbar({ onAboutClick }: NavbarProps) {
   });
 
   return (
-    <nav className="fixed top-0 left-0 w-full z-50 px-6 py-8 md:px-12 md:py-10 flex justify-center items-center pointer-events-none transition-colors duration-500">
+    <nav className="fixed top-0 left-0 w-full z-50 px-6 py-8 md:px-12 md:py-10 flex justify-end items-center pointer-events-none transition-colors duration-500">
       <div className={`flex gap-6 md:gap-10 pointer-events-auto border p-4 px-8 rounded-full backdrop-blur-2xl shadow-2xl transition-all duration-500 ${
         isDark ? "bg-black/60 border-white/10 text-dark-text" : "bg-white/80 border-black/10 text-brand-text"
       }`}>

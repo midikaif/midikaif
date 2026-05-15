@@ -21,6 +21,7 @@ interface ProjectData {
   tags: string[];
   impacts: string[];
   imageColor: string;
+  videoUrl?: string;
 }
 
 const PROJECTS: ProjectData[] = [
@@ -36,7 +37,8 @@ const PROJECTS: ProjectData[] = [
       "Reduced latency from 3s to 1.5s using Promise.all.",
       "Achieved >98% cache hit rate with Pinecone integration."
     ],
-    imageColor: "from-stone-900 via-stone-800 to-black"
+    imageColor: "from-stone-900 via-stone-800 to-black",
+    videoUrl: "/cognichat.mp4"
   },
   {
     id: "02",
@@ -50,14 +52,18 @@ const PROJECTS: ProjectData[] = [
       "Built robust OCR ingestion pipeline for PDF/Image parsing.",
       "Implemented exponential backoff for API resilience."
     ],
-    imageColor: "from-blue-950 via-slate-900 to-black"
+    imageColor: "from-blue-950 via-slate-900 to-black",
+    videoUrl: "/vakeelit.mp4"
   }
 ];
 
 function ProjectCard({ project, index, total }: { project: ProjectData; index: number; total: number }) {
   const isLast = index === total - 1;
   return (
-    <div className="relative w-full md:w-screen min-h-screen md:h-[100dvh] flex flex-col justify-center shrink-0 border-b md:border-b-0 md:border-r border-white/5">
+    <div 
+      id={project.name.toLowerCase()}
+      className="relative w-full md:w-screen min-h-screen md:h-[100dvh] flex flex-col justify-center shrink-0 border-b md:border-b-0 md:border-r border-white/5"
+    >
       
       {/* Background Watermark Text - Isolated from content flow */}
       <div className="absolute inset-0 flex items-center justify-center pointer-events-none z-0 overflow-hidden">
@@ -123,18 +129,31 @@ function ProjectCard({ project, index, total }: { project: ProjectData; index: n
                   <div className="w-2.5 h-2.5 rounded-full bg-green-500/30" />
                 </div>
                 {/* Mockup Body Content */}
-                <div className="flex-1 p-6 lg:p-10 space-y-6">
-                  <div className="h-4 w-1/3 bg-white/10 rounded-md" />
-                  <div className="space-y-3">
-                    <div className="h-2 w-full bg-white/5 rounded" />
-                    <div className="h-2 w-4/5 bg-white/5 rounded" />
-                    <div className="h-2 w-2/3 bg-white/5 rounded" />
-                  </div>
-                  <div className="aspect-video w-full bg-[#c4f022]/5 rounded-xl border border-[#c4f022]/10 flex items-center justify-center">
-                     <div className="w-12 h-12 rounded-full border border-[#c4f022]/20 flex items-center justify-center">
-                       <div className="w-1.5 h-1.5 rounded-full bg-[#c4f022] animate-pulse" />
-                     </div>
-                  </div>
+                <div className="flex-1 overflow-hidden">
+                  {project.videoUrl ? (
+                    <video 
+                      src={project.videoUrl} 
+                      autoPlay 
+                      loop 
+                      muted 
+                      playsInline 
+                      className="w-full h-full object-cover"
+                    />
+                  ) : (
+                    <div className="p-6 lg:p-10 space-y-6 h-full">
+                      <div className="h-4 w-1/3 bg-white/10 rounded-md" />
+                      <div className="space-y-3">
+                        <div className="h-2 w-full bg-white/5 rounded" />
+                        <div className="h-2 w-4/5 bg-white/5 rounded" />
+                        <div className="h-2 w-2/3 bg-white/5 rounded" />
+                      </div>
+                      <div className="aspect-video w-full bg-[#c4f022]/5 rounded-xl border border-[#c4f022]/10 flex items-center justify-center">
+                        <div className="w-12 h-12 rounded-full border border-[#c4f022]/20 flex items-center justify-center">
+                          <div className="w-1.5 h-1.5 rounded-full bg-[#c4f022] animate-pulse" />
+                        </div>
+                      </div>
+                    </div>
+                  )}
                 </div>
               </div>
             </div>

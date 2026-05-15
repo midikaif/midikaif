@@ -60,7 +60,7 @@ const CapabilityCard = ({ capability }: { capability: Capability }) => {
 
 export default function Capabilities() {
   return (
-    <section id="capabilities" className="relative w-full min-h-screen py-24 md:py-32 px-6 lg:px-12 bg-[#fdf8f5] text-[#0a0a0a] overflow-hidden flex items-center">
+    <section id="capabilities" className="relative w-full min-h-screen md:min-h-0 lg:min-h-screen py-16 md:py-24 lg:py-32 px-6 lg:px-12 bg-[#fdf8f5] text-[#0a0a0a] overflow-hidden flex items-center">
       {/* Massive Watermark */}
       <div className="absolute inset-0 z-0 flex items-center justify-center pointer-events-none select-none overflow-hidden">
         <span className="text-[15vw] font-black uppercase text-black/[0.03] leading-none whitespace-nowrap">
@@ -89,14 +89,16 @@ export default function Capabilities() {
                 Focusing on microservices, AI integration, and fault-tolerant architecture to deliver high-performance, resilient digital experiences.
               </p>
               
-              <motion.button
+              <motion.a
+                href="/MD_KAIF_KHAN_Resume.pdf"
+                download="MD_KAIF_KHAN_Resume.pdf"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="bg-[#0a0a0a] text-white px-8 py-3.5 rounded-full flex items-center gap-3 font-semibold group transition-all text-sm"
+                className="bg-[#0a0a0a] text-white px-8 py-3.5 rounded-full flex items-center gap-3 font-semibold group transition-all text-sm inline-flex"
               >
                 View Resume
                 <Download className="w-4 h-4 group-hover:translate-y-1 transition-transform" />
-              </motion.button>
+              </motion.a>
             </motion.div>
           </div>
 

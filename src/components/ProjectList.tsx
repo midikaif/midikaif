@@ -7,8 +7,8 @@ import { motion } from "motion/react";
 import { ArrowRight } from "lucide-react";
 
 const PROJECTS = [
-  { name: "CogniChat", href: "#" },
-  { name: "VakeelIt", href: "#" },
+  { name: "CogniChat", href: "#cognichat" },
+  { name: "VakeelIt", href: "#vakeelit" },
 ];
 
 export default function ProjectList() {

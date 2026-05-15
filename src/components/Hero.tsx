@@ -10,7 +10,7 @@ import Marquee from "./Marquee";
 export default function Hero() {
   return (
     <>
-      <section className="relative min-h-screen flex items-center px-6 md:px-12 pt-32 pb-24 md:py-0 overflow-hidden">
+      <section className="relative min-h-screen md:min-h-[unset] md:py-32 lg:py-0 lg:min-h-screen flex items-center px-6 md:px-12 pt-32 pb-24 overflow-hidden">
         <div className="w-full max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-16 md:gap-24 items-center">
           
           {/* Left Side: Intro */}
