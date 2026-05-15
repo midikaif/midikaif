@@ -4,11 +4,12 @@
  */
 
 import { motion } from "motion/react";
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
 import { ArrowRight } from "lucide-react";
+import CaseStudyOverlay from './CaseStudyOverlay';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -57,7 +58,7 @@ const PROJECTS: ProjectData[] = [
   }
 ];
 
-function ProjectCard({ project, index, total }: { project: ProjectData; index: number; total: number }) {
+function ProjectCard({ project, index, total, onExplore }: { project: ProjectData; index: number; total: number; onExplore: (id: string) => void }) {
   const isLast = index === total - 1;
   return (
     <div 
@@ -72,35 +73,35 @@ function ProjectCard({ project, index, total }: { project: ProjectData; index: n
         </h3>
       </div>
 
-      <div className="relative z-10 max-w-7xl mx-auto w-full px-6 py-24 md:py-16 md:px-24 flex flex-col md:flex-row items-center gap-12 lg:gap-16">
+      <div className="relative z-10 max-w-7xl mx-auto w-full px-6 py-20 md:py-12 md:px-16 lg:px-24 flex flex-col md:flex-row items-center gap-8 md:gap-12 lg:gap-16">
         
         {/* Left Column: Content */}
-        <div className="w-full md:w-1/2 space-y-6 md:space-y-10">
-          <div className="flex flex-col gap-4">
-            <span className="font-mono text-dark-text-muted text-xs md:text-sm tracking-widest">{project.id} / 02</span>
+        <div className="w-full md:w-1/2 space-y-5 md:space-y-6 lg:space-y-10">
+          <div className="flex flex-col gap-3 md:gap-4">
+            <span className="font-mono text-dark-text-muted text-[10px] md:text-xs tracking-widest">{project.id} / 02</span>
             <div className="flex flex-wrap gap-2">
               {project.tags.map(tag => (
-                <span key={tag} className="text-[9px] font-bold tracking-[0.2em] bg-white/5 border border-white/10 px-3 py-1 rounded-sm text-dark-text-muted uppercase">
+                <span key={tag} className="text-[8px] md:text-[9px] font-bold tracking-[0.2em] bg-white/5 border border-white/10 px-3 py-1 rounded-sm text-dark-text-muted uppercase">
                   {tag}
                 </span>
               ))}
             </div>
           </div>
 
-          <div className="space-y-4">
-            <h2 className="text-5xl md:text-8xl font-bold tracking-tighter leading-[0.9] text-white">
+          <div className="space-y-3 md:space-y-4">
+            <h2 className="text-4xl md:text-6xl lg:text-8xl font-bold tracking-tighter leading-[0.9] text-white">
               {project.name}
             </h2>
-            <p className="text-xl md:text-2xl text-dark-text-muted font-light leading-snug max-w-xl">
+            <p className="text-lg md:text-xl lg:text-2xl text-dark-text-muted font-light leading-snug max-w-xl">
               {project.headline}
             </p>
           </div>
           
-          <div className="space-y-4 max-w-lg">
+          <div className="space-y-3 md:space-y-4 max-w-lg">
              {project.impacts.map((impact, i) => (
-               <div key={i} className="flex gap-4 items-start group">
+               <div key={i} className="flex gap-3 md:gap-4 items-start group">
                  <div className="mt-2 w-1.5 h-1.5 rounded-full bg-[#c4f022] shrink-0" />
-                 <p className="text-base md:text-lg text-dark-text-muted group-hover:text-dark-text transition-colors duration-300">
+                 <p className="text-sm md:text-base lg:text-lg text-dark-text-muted group-hover:text-dark-text transition-colors duration-300">
                     {impact}
                  </p>
                </div>
@@ -108,9 +109,10 @@ function ProjectCard({ project, index, total }: { project: ProjectData; index: n
           </div>
 
           <motion.button 
+            onClick={() => onExplore(project.name)}
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            className="inline-block px-10 py-5 bg-[#c4f022] text-black rounded-full text-xs font-black tracking-widest uppercase hover:shadow-[0_0_30px_rgba(196,240,34,0.3)] transition-all"
+            className="inline-block px-8 py-4 md:px-10 md:py-5 bg-[#c4f022] text-black rounded-full text-[10px] md:text-xs font-black tracking-widest uppercase hover:shadow-[0_0_30px_rgba(196,240,34,0.3)] transition-all"
           >
             Explore Case Study
           </motion.button>
@@ -193,6 +195,7 @@ export default function ProjectShowcase() {
   const pinRef = useRef<HTMLDivElement>(null);
   const trackRef = useRef<HTMLDivElement>(null);
   const progressBarRef = useRef<HTMLDivElement>(null);
+  const [activeStudy, setActiveStudy] = useState<string | null>(null);
 
   useGSAP(() => {
     if (!trackRef.current || !pinRef.current) return;
@@ -227,7 +230,13 @@ export default function ProjectShowcase() {
     <section id="works" ref={pinRef} className="relative min-h-screen md:h-[100dvh] bg-dark-bg text-dark-text z-30 md:overflow-hidden">
       <div ref={trackRef} className="flex flex-col md:flex-row h-full w-full md:w-max">
         {PROJECTS.map((project, index) => (
-          <ProjectCard key={project.id} project={project} index={index} total={PROJECTS.length} />
+          <ProjectCard 
+            key={project.id} 
+            project={project} 
+            index={index} 
+            total={PROJECTS.length} 
+            onExplore={(id) => setActiveStudy(id)}
+          />
         ))}
       </div>
       
@@ -238,6 +247,12 @@ export default function ProjectShowcase() {
            className="absolute top-1/2 left-0 h-1 bg-brand-accent -translate-y-1/2 rounded-full w-0"
          />
       </div>
+
+      <CaseStudyOverlay 
+        isOpen={!!activeStudy}
+        onClose={() => setActiveStudy(null)}
+        projectId={activeStudy || ""}
+      />
     </section>
   );
 }
