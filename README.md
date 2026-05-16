@@ -27,7 +27,7 @@ I specialize in building **fault-tolerant, AI-orchestrated systems**. My focus l
 
 <p align="left">
   <a href="https://skillicons.dev">
-    <img src="https://skillicons.dev/icons?i=ts,js,py,nodejs,fastapi,express,mongodb,redis,react,nextjs,tailwind,framer,threejs,docker,figma,git" />
+    <img src="https://skillicons.dev/icons?i=ts,js,py,nodejs,fastapi,express,mongodb,redis,react,nextjs,tailwind,framermotion,threejs,docker,figma,git" />
   </a>
 </p>
 
