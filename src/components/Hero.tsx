@@ -11,6 +11,18 @@ export default function Hero() {
   return (
     <>
       <section className="relative min-h-screen md:min-h-[unset] md:py-32 lg:py-0 lg:min-h-screen flex items-center px-6 md:px-12 pt-32 pb-24 overflow-hidden">
+        {/* Top Left Indicator */}
+        <div className="absolute top-10 left-6 md:top-16 md:left-12">
+          <motion.div 
+            initial={{ opacity: 0, x: -20 }}
+            animate={{ opacity: 1, x: 0 }}
+            className="flex items-center gap-4"
+          >
+            <div className="w-8 h-[1px] bg-black/10" />
+            <span className="text-[10px] font-black uppercase tracking-[0.4em] text-black/20">Archive / 03</span>
+          </motion.div>
+        </div>
+
         <div className="w-full max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-16 md:gap-24 items-center">
           
           {/* Left Side: Intro */}
@@ -18,7 +30,7 @@ export default function Hero() {
              initial={{ opacity: 0, y: 30 }}
              animate={{ opacity: 1, y: 0 }}
              transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-             className="flex flex-col gap-8 md:gap-12"
+             className="flex flex-col gap-8 md:gap-12 lg:gap-12"
           >
             <div className="space-y-2">
               <motion.h1 
@@ -38,7 +50,7 @@ export default function Hero() {
               transition={{ delay: 0.6, duration: 1 }}
               className="max-w-md space-y-6"
             >
-              <p className="text-xl md:text-2xl font-normal leading-tight text-brand-text/80">
+              <p className="text-xl md:text-2xl lg:text-2xl font-normal leading-tight text-brand-text/80">
                 Building scalable backend systems and AI-powered products.
               </p>
               

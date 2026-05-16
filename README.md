@@ -36,8 +36,9 @@ I don't just build features; I engineer **resilient digital ecosystems**. My app
 ## 🏗️ Featured Engineering Projects
 
 ### 01. CogniChat — [AI-Powered Collaborative Interface]
+**GitHub**: [midikaif/cognichat](https://github.com/midikaif/cognichat)  
 **The Problem**: RAG pipelines with 3s+ latency and WebSocket race conditions that dropped user messages.
-- **Solution**: Re-architected with **Promise.all** concurrency and **Semantic Caching** (\>98% hit rate).
+- **Solution**: Re-architected with **Promise.all** concurrency and **Semantic Caching** (>98% hit rate).
 - **Tech Highlights**: Decoupled search indexes from metadata to resolve "Vector Dilution".
 - **Impact**: Reduced end-to-end latency by **50%** (1.5s sub-second feel).
 
@@ -47,7 +48,15 @@ I don't just build features; I engineer **resilient digital ecosystems**. My app
   </video>
 </p>
 
-### 02. VakeelIt — [Cross-Platform AI Legal Assistant]
+### 02. DilkashBharat — [Full-Stack Geo-Spatial Tourism Engine]
+**GitHub**: [midikaif/DilkashBharat](https://github.com/midikaif/DilkashBharat)  
+**The Problem**: Developing a content-heavy tourism portal required balancing complex user-generated uploads with rigorous security standards.
+- **Solution**: Implemented double-layered sanitization (NoSQL/XSS) and a cloud-native asset pipeline.
+- **Tech Highlights**: Integrated MapTiler for real-time geographic rendering and clustering.
+- **Impact**: Achieved zero-vulnerability audit and 40% improvement in image load speeds.
+
+### 03. VakeelIt — [Cross-Platform AI Legal Assistant]
+**GitHub**: [midikaif/vakeelit-platform](https://github.com/midikaif/vakeelit-platform)  
 **The Problem**: "Production-only" 500 errors and silent routing loops in a serverless monorepo.
 - **Solution**: Built a **Global Exception Handler** to smuggle stack traces back to the browser console.
 - **Tech Highlights**: Dynamic `sys.path` injection for monorepo module resolution on Vercel.

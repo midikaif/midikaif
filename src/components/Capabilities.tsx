@@ -10,24 +10,24 @@ interface Capability {
 
 const CAPABILITIES: Capability[] = [
   {
-    title: "Distributed Systems & Microservices",
-    description: "Expertise in decoupling architectures. I deploy dynamic React/Next.js frontends on Vercel and robust Python/FastAPI backends on Render, solving cross-origin routing and latency challenges.",
-    execution: "Production-ready monorepo architecture with custom Global Exception Handlers."
+    title: "Distributed Systems & Security",
+    description: "Expertise in decoupling architectures. I deploy dynamic React frontends and robust FastAPI backends, actively hardening systems against NoSQL injection, XSS, and unauthorized access.",
+    execution: "Implemented double-layer sanitization and serverless path-injection fixes for high-security production environments."
   },
   {
-    title: "AI Integration & Semantic Caching",
-    description: "Building smart features using Gemini API. I engineer RAG pipelines using Pinecone and implement semantic caching to resolve 'vector dilution' and reduce LLM API costs.",
-    execution: "Optimized RAG pipelines with parallel data fetching (Promise.all) for sub-second responses."
+    title: "AI Integration & RAG Core",
+    description: "Building smart, generative features using Gemini API. I engineer RAG pipelines using Vector DBs and implement semantic caching to resolve 'vector dilution' and drastically reduce LLM API overhead.",
+    execution: "Optimized Similarity Search hit-rates to >98% by decoupling vector indexes from metadata payloads."
   },
   {
-    title: "Backend Reliability Engineering",
-    description: "Focusing on systems that don't fail silently. I build fault-tolerant APIs and eliminate complex WebSocket race conditions for high availability.",
-    execution: "Implementing exponential backoff and socket singleton patterns for total state stability."
+    title: "Backend Reliability & Real-Time",
+    description: "Focusing on systems that don't fail silently. I build fault-tolerant APIs, write custom exception smuggling pipelines, and eliminate complex WebSocket race conditions for persistent state.",
+    execution: "Solved critical WebSocket hand-off bugs by bridging the React state-async gap with synchronous ref tracking."
   },
   {
-    title: "Cinematic UI Engineering",
-    description: "Crafting premium interactions using GSAP, Framer Motion, and Tailwind CSS. I bridge the gap between heavy logic and flawless, 60fps glassmorphic UX.",
-    execution: "High-performance fragment shaders and GSAP orchestrations for tactile interfaces."
+    title: "Performance & Interaction",
+    description: "Crafting premium, award-winning interactions using GSAP and Framer Motion. I bridge the gap between heavy legacy data and flawless, cinematic 60fps user experiences.",
+    execution: "Engineered high-performance fragment shaders and GSAP ScrollTrigger orchestrations for world-class engagement."
   }
 ];
 

@@ -8,7 +8,7 @@ import { useRef, useState } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Github } from "lucide-react";
 import CaseStudyOverlay from './CaseStudyOverlay';
 
 gsap.registerPlugin(ScrollTrigger);
@@ -23,6 +23,7 @@ interface ProjectData {
   impacts: string[];
   imageColor: string;
   videoUrl?: string;
+  githubUrl?: string;
 }
 
 const PROJECTS: ProjectData[] = [
@@ -39,10 +40,26 @@ const PROJECTS: ProjectData[] = [
       "Achieved >98% cache hit rate with Pinecone integration."
     ],
     imageColor: "from-stone-900 via-stone-800 to-black",
-    videoUrl: "/cognichat.mp4"
+    videoUrl: "/cognichat.mp4",
+    githubUrl: "https://github.com/midikaif/cognichat"
   },
   {
     id: "02",
+    name: "DilkashBharat",
+    headline: "Full-Stack Geo-Spatial Tourism Engine",
+    description: "A modern web application for discovering and sharing heritage sites in India, built with a focus on security and high-performance asset handling.",
+    tags: ["Node.js", "Express", "MongoDB", "Cloudinary", "MapTiler"],
+    impacts: [
+      "Built a secure middleware layer to prevent NoSQL Injection and XSS attacks.",
+      "Integrated MapTiler for dynamic geo-spatial site visualization.",
+      "Optimized image processing using Cloudinary's transform pipeline."
+    ],
+    imageColor: "from-orange-950 via-amber-900 to-black",
+    videoUrl: "/dilkashbharat.mp4",
+    githubUrl: "https://github.com/midikaif/DilkashBharat"
+  },
+  {
+    id: "03",
     name: "VakeelIt",
     headline: "AI Legal Assistant for automated document analysis.",
     role: "Full Stack Developer",
@@ -54,7 +71,8 @@ const PROJECTS: ProjectData[] = [
       "Implemented exponential backoff for API resilience."
     ],
     imageColor: "from-blue-950 via-slate-900 to-black",
-    videoUrl: "/vakeelit.mp4"
+    videoUrl: "/vakeelit.mp4",
+    githubUrl: "https://github.com/midikaif/vakeelit-platform"
   }
 ];
 
@@ -73,12 +91,12 @@ function ProjectCard({ project, index, total, onExplore }: { project: ProjectDat
         </h3>
       </div>
 
-      <div className="relative z-10 max-w-7xl mx-auto w-full px-6 py-20 md:py-12 md:px-16 lg:px-24 flex flex-col md:flex-row items-center gap-8 md:gap-12 lg:gap-16">
+      <div className="relative z-10 max-w-7xl mx-auto w-full px-6 py-20 md:py-8 md:px-16 lg:px-24 flex flex-col md:flex-row items-center gap-8 md:gap-6 lg:gap-16">
         
         {/* Left Column: Content */}
-        <div className="w-full md:w-1/2 space-y-5 md:space-y-6 lg:space-y-10">
-          <div className="flex flex-col gap-3 md:gap-4">
-            <span className="font-mono text-dark-text-muted text-[10px] md:text-xs tracking-widest">{project.id} / 02</span>
+        <div className="w-full md:w-1/2 space-y-5 md:space-y-4 lg:space-y-10">
+          <div className="flex flex-col gap-3 md:gap-3">
+            <span className="font-mono text-dark-text-muted text-[10px] md:text-xs tracking-widest">{project.id} / 0{total}</span>
             <div className="flex flex-wrap gap-2">
               {project.tags.map(tag => (
                 <span key={tag} className="text-[8px] md:text-[9px] font-bold tracking-[0.2em] bg-white/5 border border-white/10 px-3 py-1 rounded-sm text-dark-text-muted uppercase">
@@ -88,34 +106,50 @@ function ProjectCard({ project, index, total, onExplore }: { project: ProjectDat
             </div>
           </div>
 
-          <div className="space-y-3 md:space-y-4">
-            <h2 className="text-4xl md:text-6xl lg:text-8xl font-bold tracking-tighter leading-[0.9] text-white">
+          <div className="space-y-3 md:space-y-3">
+            <h2 className="text-4xl md:text-5xl lg:text-8xl font-bold tracking-tighter leading-[0.9] text-white">
               {project.name}
             </h2>
-            <p className="text-lg md:text-xl lg:text-2xl text-dark-text-muted font-light leading-snug max-w-xl">
+            <p className="text-lg md:text-lg lg:text-2xl text-dark-text-muted font-light leading-snug max-w-xl">
               {project.headline}
             </p>
           </div>
           
-          <div className="space-y-3 md:space-y-4 max-w-lg">
+          <div className="space-y-3 md:space-y-3 max-w-lg">
              {project.impacts.map((impact, i) => (
-               <div key={i} className="flex gap-3 md:gap-4 items-start group">
+               <div key={i} className="flex gap-3 md:gap-3 items-start group">
                  <div className="mt-2 w-1.5 h-1.5 rounded-full bg-[#c4f022] shrink-0" />
-                 <p className="text-sm md:text-base lg:text-lg text-dark-text-muted group-hover:text-dark-text transition-colors duration-300">
+                 <p className="text-sm md:text-sm lg:text-lg text-dark-text-muted group-hover:text-dark-text transition-colors duration-300">
                     {impact}
                  </p>
                </div>
              ))}
           </div>
 
-          <motion.button 
-            onClick={() => onExplore(project.name)}
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            className="inline-block px-8 py-4 md:px-10 md:py-5 bg-[#c4f022] text-black rounded-full text-[10px] md:text-xs font-black tracking-widest uppercase hover:shadow-[0_0_30px_rgba(196,240,34,0.3)] transition-all"
-          >
-            Explore Case Study
-          </motion.button>
+          <div className="flex flex-wrap gap-3 md:gap-4">
+            <motion.button 
+              onClick={() => onExplore(project.name)}
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className="inline-block px-8 py-4 md:px-8 md:py-4 lg:px-10 lg:py-5 bg-[#c4f022] text-black rounded-full text-[10px] md:text-[10px] lg:text-xs font-black tracking-widest uppercase hover:shadow-[0_0_30px_rgba(196,240,34,0.3)] transition-all"
+            >
+              Explore Case Study
+            </motion.button>
+
+            {project.githubUrl && (
+              <motion.a 
+                href={project.githubUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="inline-flex items-center gap-3 px-8 py-4 md:px-8 md:py-4 lg:px-10 lg:py-5 bg-white/5 border border-white/10 text-white rounded-full text-[10px] md:text-[10px] lg:text-xs font-black tracking-widest uppercase hover:bg-white/10 transition-all"
+              >
+                <Github className="w-4 h-4" />
+                GitHub
+              </motion.a>
+            )}
+          </div>
         </div>
 
         {/* Right Column: Visual (Reduced size and constrained) */}
@@ -212,7 +246,7 @@ export default function ProjectShowcase() {
           pin: true,
           start: "top top",
           end: () => `+=${track.scrollWidth - window.innerWidth}`,
-          scrub: 1,
+          scrub: 0.5,
           invalidateOnRefresh: true,
           onUpdate: (self) => {
             if (progressBarRef.current) {

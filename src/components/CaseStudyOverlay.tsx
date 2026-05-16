@@ -38,6 +38,27 @@ const CASE_STUDIES: Record<string, CaseStudyContent> = {
       { label: "Cost Saving", value: "50%" }
     ]
   },
+  "DilkashBharat": {
+    title: "Secure Full-Stack Geo-Spatial Engineering",
+    subtitle: "Protecting user data while maintaining high-performance mapping and asset delivery.",
+    role: "Full-Stack Architect",
+    duration: "2 Months",
+    challenge: "Developing a content-heavy tourism portal required balancing complex user-generated uploads with rigorous security standards to prevent injection attacks.",
+    approach: [
+      "Deployed double-layered sanitization using express-mongo-sanitize and sanitize-html.",
+      "Architected a cloud-native asset pipeline using Multer and Cloudinary storage.",
+      "Implemented MapTiler API for real-time geographic rendering and clustering.",
+      "Engineered persistent session management using connect-mongo for seamless UX."
+    ],
+    solution: "I prioritized an 'Implicit Security' model, where every payload is automatically cleaned before hitting the DB, while offloading heavy asset logic to CDN providers.",
+    result: "Achieved zero-vulnerability audit for NoSQL/XSS. Improved image load speeds by 40% through automatic format optimization on the fly.",
+    techStack: ["Node.js", "Express", "EJS", "MongoDB", "Cloudinary", "MapTiler"],
+    metrics: [
+      { label: "Security Audit", value: "Pass" },
+      { label: "Asset Load Speed", value: "+40%" },
+      { label: "Uptime", value: "100%" }
+    ]
+  },
   "VakeelIt": {
     title: "Scalable Monorepo & Deployment Engineering",
     subtitle: "Solving production-only cascading failures in a cross-platform serverless environment.",

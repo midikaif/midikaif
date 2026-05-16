@@ -8,14 +8,15 @@ import { ArrowRight } from "lucide-react";
 
 const PROJECTS = [
   { name: "CogniChat", href: "#cognichat" },
+  { name: "DilkashBharat", href: "#dilkashbharat" },
   { name: "VakeelIt", href: "#vakeelit" },
 ];
 
 export default function ProjectList() {
   return (
     <div className="w-full max-w-md ml-auto">
-      <p className="text-[10px] uppercase tracking-[0.2em] font-bold text-black/40 mb-8">
-        Selected Projects
+      <p className="text-[10px] uppercase tracking-[0.2em] font-black text-black/20 mb-8 flex items-center gap-4">
+        Selected Projects <span className="opacity-40">/ 0{PROJECTS.length}</span>
       </p>
       <div className="flex flex-col">
         {PROJECTS.map((project, index) => (
