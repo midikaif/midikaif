@@ -6,11 +6,11 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/midikaif">
-    <img src="https://github-readme-stats.vercel.app/api?username=midikaif&show_icons=true&theme=tokyonight&hide_border=true&title_color=c4f022" alt="GitHub Stats" height="180" />
+  <a href="https://linkedin.com/in/md-kaif-khan">
+    <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" />
   </a>
-  <a href="https://github.com/midikaif">
-    <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=midikaif&layout=compact&theme=tokyonight&hide_border=true&title_color=c4f022" alt="Top Languages" height="180" />
+  <a href="mailto:mdkaif0153@gmail.com">
+    <img src="https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white" />
   </a>
 </p>
 
@@ -40,7 +40,7 @@ I specialize in building **fault-tolerant, AI-orchestrated systems**. My focus l
 ---
 
 ## 📜 Certifications & Achievements
-- **CS50P**: Introduction to Programming with Python | **Harvard University** [[Verify]](https://cs50.harvard.edu/certificates/01978369-7a2b-4f33-bfc6-6743d602e251)
+- **CS50P**: Introduction to Programming with Python | **Harvard University** (2025) [[Verify]](https://cs50.harvard.edu/certificates/01978369-7a2b-4f33-bfc6-6743d602e251)
 - **Full-Stack Development**: Professional Course Completion | **Sheriyans Coding School** (2025)
 - **Hackathon Participation**: Recognition for Architectural Implementation | **Sheriyans Hackathon** (2025)
 
