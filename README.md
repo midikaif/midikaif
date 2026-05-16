@@ -7,10 +7,10 @@
 
 <p align="center">
   <a href="https://github.com/midikaif">
-    <img src="https://github-readme-stats.vercel.app/api?username=midikaif&show_icons=true&theme=tokyonight&hide_border=true&title_color=c4f022&icon_color=c4f022&text_color=ffffff&bg_color=0D1117" height="180" />
+    <img src="https://github-readme-stats.vercel.app/api?username=midikaif&show_icons=true&theme=tokyonight&hide_border=true&title_color=c4f022" alt="GitHub Stats" height="180" />
   </a>
   <a href="https://github.com/midikaif">
-    <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=midikaif&layout=compact&theme=tokyonight&hide_border=true&title_color=c4f022&text_color=ffffff&bg_color=0D1117" height="180" />
+    <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=midikaif&layout=compact&theme=tokyonight&hide_border=true&title_color=c4f022" alt="Top Languages" height="180" />
   </a>
 </p>
 
@@ -36,6 +36,13 @@ I specialize in building **fault-tolerant, AI-orchestrated systems**. My focus l
 - **AI/ML**: RAG Pipelines (Pinecone/Gemini), Semantic Caching, Multi-Modal Vector Search.
 - **Frontend**: 60FPS Cinematic Interactions, GSAP/Framer Motion, Responsive Layout Architecture.
 - **DevOps**: Docker Containerization, CI/CD, Serverless Optimization, Infrastructure-as-Code.
+
+---
+
+## 📜 Certifications & Achievements
+- **CS50P**: Introduction to Programming with Python | **Harvard University** [[Verify]](https://cs50.harvard.edu/certificates/01978369-7a2b-4f33-bfc6-6743d602e251)
+- **Full-Stack Development**: Professional Course Completion | **Sheriyans Coding School** (2025)
+- **Hackathon Participation**: Recognition for Architectural Implementation | **Sheriyans Hackathon** (2025)
 
 ---
 

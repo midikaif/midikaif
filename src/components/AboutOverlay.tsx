@@ -208,6 +208,68 @@ export default function AboutOverlay({ isOpen, onClose }: AboutOverlayProps) {
                 </div>
               </div>
 
+              {/* Certifications Section */}
+              <div className="mt-40">
+                <motion.h3 
+                  initial={{ opacity: 0 }}
+                  whileInView={{ opacity: 1 }}
+                  viewport={{ once: true }}
+                  className="text-[10px] uppercase tracking-[0.5em] font-black text-stone-300 mb-16"
+                >
+                  Certifications & Recognition
+                </motion.h3>
+
+                <div className="space-y-12">
+                  {[
+                    {
+                      institution: "Harvard University",
+                      title: "CS50P: Introduction to Programming with Python",
+                      year: "2025",
+                      href: "https://cs50.harvard.edu/certificates/01978369-7a2b-4f33-bfc6-6743d602e251"
+                    },
+                    {
+                      institution: "Sheriyans Coding School",
+                      title: "Full-Stack Development Mastery",
+                      year: "2025",
+                      href: "#" // Placeholder
+                    },
+                    {
+                      institution: "Sheriyans Hackathon",
+                      title: "Hackathon Recognition — Architectural Excellence",
+                      year: "2025",
+                      href: "#" // Placeholder
+                    }
+                  ].map((cert, i) => (
+                    <motion.div
+                      key={cert.title}
+                      initial={{ opacity: 0, x: -20 }}
+                      whileInView={{ opacity: 1, x: 0 }}
+                      viewport={{ once: true }}
+                      transition={{ delay: i * 0.1 }}
+                      className="group flex flex-col md:flex-row md:items-center justify-between gap-6 border-b border-stone-100 pb-8"
+                    >
+                      <div className="space-y-1">
+                        <p className="text-[10px] uppercase tracking-widest font-black text-brand-accent">{cert.institution}</p>
+                        <h4 className="text-xl md:text-2xl font-medium text-black group-hover:translate-x-2 transition-transform duration-500">{cert.title}</h4>
+                      </div>
+                      <div className="flex items-center gap-6">
+                        <span className="text-sm font-mono text-stone-400">{cert.year}</span>
+                        {cert.href !== "#" && (
+                          <a 
+                            href={cert.href}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-[10px] font-black uppercase tracking-widest px-4 py-2 bg-stone-100 hover:bg-brand-accent hover:text-white transition-all rounded-full"
+                          >
+                            Verify
+                          </a>
+                        )}
+                      </div>
+                    </motion.div>
+                  ))}
+                </div>
+              </div>
+
               {/* Footer / Connect */}
               <div className="mt-auto pt-40 pb-12">
                 <div className="flex flex-col gap-10 pt-12 border-t border-stone-100">
@@ -222,8 +284,8 @@ export default function AboutOverlay({ isOpen, onClose }: AboutOverlayProps) {
                   </div>
                   <div className="flex flex-wrap gap-x-8 gap-y-4">
                     {[
-                      { name: "LinkedIn", url: "https://linkedin.com/in/mdkaifkhan" },
-                      { name: "GitHub", url: "https://github.com/mdkaif0153" }
+                      { name: "LinkedIn", url: "https://linkedin.com/in/md-kaif-khan" },
+                      { name: "GitHub", url: "https://github.com/midikaif" }
                     ].map(link => (
                       <a 
                         key={link.name} 
