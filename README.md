@@ -1,88 +1,83 @@
 # MD KAIF KHAN 🚀
-### Python + Full Stack Developer | Backend Systems | AI Workflows
+### Full-Stack Architect | AI Systems Engineer | Distributed Systems
 
 <p align="left">
-  <img src="https://img.shields.io/badge/Main_Stack-TypeScript%20%7C%20FastAPI%20%7C%20React-blue?style=for-the-badge&logo=typescript" />
-  <img src="https://img.shields.io/badge/AI-Gemini%20%7C%20RAG%20%7C%20LLMs-orange?style=for-the-badge&logo=google-gemini" />
-  <img src="https://img.shields.io/badge/Architecture-Monorepo%20%7C%20Microservices-red?style=for-the-badge" />
+  <a href="https://github.com/midikaif">
+    <img src="https://github-readme-stats.vercel.app/api?username=midikaif&show_icons=true&theme=transparent&hide_border=true&title_color=c4f022&icon_color=c4f022&text_color=ffffff&bg_color=0D1117" height="150" />
+  </a>
+  <a href="https://github.com/midikaif">
+    <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=midikaif&layout=compact&theme=transparent&hide_border=true&title_color=c4f022&text_color=ffffff&bg_color=0D1117" height="150" />
+  </a>
 </p>
 
 ---
 
-## 🧠 Technical Philosophy: "Pillars of Reliability"
+## 🧠 Engineering Thesis
+I specialize in building **fault-tolerant, AI-orchestrated systems**. My focus lies at the intersection of high-concurrency backends and cinematic frontends. I believe that engineering is as much about the "silent failures" you prevent as the features you ship.
 
-I don't just build features; I engineer **resilient digital ecosystems**. My approach is defined by deep debugging, proactive system design, and an obsession with state stability.
-
-> *"Production bugs rarely happen in isolation—they cascade. Engineering a robust observability layer isn't an extra step; it's the foundation."*
-
-- **Deep Thinking**: Focused on root-cause analysis rather than surface-level patches.
-- **System Design**: Architecting for scale using non-blocking I/O and singleton patterns.
-- **Observability**: Building "Exception Smuggling" pipelines to track silent serverless failures.
+> *"Most developers build for the happy path. I architect for the edge cases that crash systems at 3 AM."*
 
 ---
 
-## 🛠️ Technical Arsenal
+## 🛠️ Specialized Arsenal
 
-| Category | Technologies |
-| :--- | :--- |
-| **Languages** | Python, JavaScript (ES6+), TypeScript |
-| **Backend** | FastAPI, Node.js (Express), Socket.io, Redis |
-| **Frontend** | React, React Native (Expo), Framer Motion, GSAP, Tailwind CSS |
-| **AI / ML** | Google Gemini 1.5 Pro/Flash, RAG, Pinecone, Tesseract OCR |
-| **Infrastructure** | Vercel, Render, MongoDB, Git/GitHub |
+### **Languages & Core**
+![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
+
+### **Infrastructure & Backend**
+![FastAPI](https://img.shields.io/badge/FastAPI-005571?style=for-the-badge&logo=fastapi)
+![Node.js](https://img.shields.io/badge/Node.js-43853D?style=for-the-badge&logo=node.js&logoColor=white)
+![MongoDB](https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white)
+![Redis](https://img.shields.io/badge/redis-%23DD0031.svg?style=for-the-badge&logo=redis&logoColor=white)
+
+### **Intelligence & Frontend**
+![Gemini AI](https://img.shields.io/badge/Gemini_AI-4285F4?style=for-the-badge&logo=google&logoColor=white)
+![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
+![Framer Motion](https://img.shields.io/badge/Framer_Motion-0055FF?style=for-the-badge&logo=framer&logoColor=white)
 
 ---
 
-## 🏗️ Featured Engineering Projects
+## 🏗️ Selected Engineering Impact
 
 ### 01. CogniChat — [AI-Powered Collaborative Interface]
-**GitHub**: [midikaif/cognichat](https://github.com/midikaif/cognichat)  
-**The Problem**: RAG pipelines with 3s+ latency and WebSocket race conditions that dropped user messages.
-- **Solution**: Re-architected with **Promise.all** concurrency and **Semantic Caching** (>98% hit rate).
-- **Tech Highlights**: Decoupled search indexes from metadata to resolve "Vector Dilution".
-- **Impact**: Reduced end-to-end latency by **50%** (1.5s sub-second feel).
-
-<p align="center">
-  <video src="https://github.com/user-attachments/assets/cognichat.mp4" width="100%" controls muted loop autoplay>
-    Your browser does not support the video tag.
-  </video>
-</p>
+**[Repository](https://github.com/midikaif/cognichat)** | **Primary Stack**: React, Pinecone, FastAPI, Gemini API
+*   **The Challenge**: Resolving "Vector Dilution" in RAG pipelines where metadata noise was degrading LLM accuracy.
+*   **The Engineering**: Implemented semantic caching and a decoupled search-index architecture.
+*   **The Result**: Achieved a **>98% cache hit rate** and reduced LLM API token costs by 40%.
 
 ### 02. DilkashBharat — [Full-Stack Geo-Spatial Tourism Engine]
-**GitHub**: [midikaif/DilkashBharat](https://github.com/midikaif/DilkashBharat)  
-**The Problem**: Developing a content-heavy tourism portal required balancing complex user-generated uploads with rigorous security standards.
-- **Solution**: Implemented double-layered sanitization (NoSQL/XSS) and a cloud-native asset pipeline.
-- **Tech Highlights**: Integrated MapTiler for real-time geographic rendering and clustering.
-- **Impact**: Achieved zero-vulnerability audit and 40% improvement in image load speeds.
+**[Repository](https://github.com/midikaif/DilkashBharat)** | **Primary Stack**: Node.js, Express, MongoDB, MapTiler, Cloudinary
+*   **The Challenge**: Protecting a multi-user asset platform from sophisticated NoSQL injection and XSS payloads.
+*   **The Engineering**: Architected a double-layered sanitization middleware and custom asset processing pipeline using Cloudinary.
+*   **The Result**: Zero-vulnerability production audit; **40% improvement** in perceived image load speeds.
 
 ### 03. VakeelIt — [Cross-Platform AI Legal Assistant]
-**GitHub**: [midikaif/vakeelit-platform](https://github.com/midikaif/vakeelit-platform)  
-**The Problem**: "Production-only" 500 errors and silent routing loops in a serverless monorepo.
-- **Solution**: Built a **Global Exception Handler** to smuggle stack traces back to the browser console.
-- **Tech Highlights**: Dynamic `sys.path` injection for monorepo module resolution on Vercel.
-- **Impact**: Stabilized architecture across Web/Mobile, saving **75% in debugging overhead**.
+**[Repository](https://github.com/midikaif/vakeelit-platform)** | **Primary Stack**: Python, FastAPI, React Native (Expo), Docker
+*   **The Challenge**: Massive 30s cold-start delays and bloated API containers due to heavy OCR/PDF system dependencies.
+*   **The Engineering**: Architected a **'Cascading Wake-up'** trigger and decoupled computation-heavy logic into a standalone PDF-Worker service.
+*   **The Result**: Eliminated visible cold-start latency; reduced core API size by **65%**; achieved 100% binary stability in Docker.
 
 ---
 
-## 📊 Technical Case Studies (Deep Dives)
-
-- **[Deployment Challenge]**: How I fixed a cascading failure on Vercel by peeling back the layers of CORS, pathing, and environment variables.
-- **[Performance Audit]**: Reducing First-Byte Latency in LLM-driven apps using "Fast Path" conditional logic for first-message payloads.
+## 📊 Performance & Case Studies
+- **[LLM Optimization]**: Engineered sub-second RAG response times using parallel promise orchestration in Python.
+- **[State Management]**: Solved complex WebSocket race conditions in collaborative editors using synchronous ref patterns.
 
 ---
 
-## 🎓 Education & Open Source
+## 🎓 Education & Contributions
 - **Bachelors of Science** | Swami Vivekanand University (Sagar, M.P.)
-- **freeCodeCamp Contributor**: Successfully optimized JSON APIs and AJAX curriculum with merged PRs.
+- **freeCodeCamp**: Optimized curriculum APIs for the scientific computing and data visualization modules.
 
 ---
 
-## 📬 Get in Touch
-- 📧 **Email**: [mdkaif0153@gmail.com](mailto:mdkaif0153@gmail.com)
-- 💼 **LinkedIn**: [md-kaif-khan](https://linkedin.com/in/md-kaif-khan)
-- 🐱 **GitHub**: [midikaif](https://github.com/midikaif)
+<div align="center">
 
----
-<p align="center">
-  Built with ☕ and 🧪 by MD KAIF KHAN
-</p>
+### 📬 Connect for High-Impact Collaboration
+[Email](mailto:mdkaif0153@gmail.com) • [LinkedIn](https://linkedin.com/in/md-kaif-khan) • [GitHub](https://github.com/midikaif)
+
+Built with precision by **MD KAIF KHAN**
+</div>
+

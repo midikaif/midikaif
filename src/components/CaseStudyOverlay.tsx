@@ -60,24 +60,24 @@ const CASE_STUDIES: Record<string, CaseStudyContent> = {
     ]
   },
   "VakeelIt": {
-    title: "Scalable Monorepo & Deployment Engineering",
-    subtitle: "Solving production-only cascading failures in a cross-platform serverless environment.",
-    role: "Full-Stack Engineer",
+    title: "Microservices & Cold-Start Orchestration",
+    subtitle: "Architecting a multi-service ecosystem to handle heavyweight OCR and PDF processing.",
+    role: "Full-Stack Architect",
     duration: "3 Months",
-    challenge: "Encountered critical silent 500 errors and 404 routing loops upon deploying a FastAPI/React monorepo to a serverless platform (Vercel).",
+    challenge: "Deploying a Tesseract/WeasyPrint pipeline resulted in massive Docker images and 30s 'Cold Start' delays on free-tier hosting, causing critical user drop-off.",
     approach: [
-      "Engineered a 'Global Exception Smuggling' pipeline to surface Python stack traces directly in the browser's network tab.",
-      "Optimized Vercel's module resolution by dynamically injecting path configurations into sys.path at runtime.",
-      "Built a robust catch-all rewrite system in vercel.json to handle SPA client-side routing.",
-      "Refactored network layers to handle EXPO_PUBLIC environment variable drops with dynamic relative-path fallbacks."
+      "Decoupled the PDF-Worker from the Core API to isolate system-level binary dependencies (Cairo, Tesseract).",
+      "Engineered a 'Cascading Wake-up' architecture using background pings to warm up services during initial app load.",
+      "Resolved deep dependency conflicts between WeasyPrint and pydyf v0.11.0 via strict version anchoring.",
+      "Optimized Docker builds by mapping deprecated Debian 12 graphics libraries to modern harfbuzz/openjp2 equivalents."
     ],
-    solution: "I implemented a systematic 'peel-back' debugging approach, identifying that root causes were split across Python pathing, missing dependencies in requirements.txt (dnspython), and CORS loopback blocks.",
-    result: "Stabilized the entire monorepo architecture, eliminating 100% of production-only crashes. Avoided the need for managed AWS services, significantly lowering infrastructure overhead.",
-    techStack: ["React Native", "Expo", "FastAPI", "Vercel", "Vite"],
+    solution: "I transitioned from a monolith to a microservices model, using a React Native frontend to orchestrate service wake-ups while the user was still on the landing page.",
+    result: "Eliminated 100% of perceived cold-start latency. Reduced core API container size by 65%. Successfully stabilized PDF generation across heterogenous environments.",
+    techStack: ["FastAPI", "React Native", "Docker", "WeasyPrint", "Tesseract", "Render"],
     metrics: [
-      { label: "Uptime", value: "99.9%" },
-      { label: "Infra Cost", value: "-40%" },
-      { label: "Debug Time", value: "-75%" }
+      { label: "Cold Start Delay", value: "0ms" },
+      { label: "API Bundle Size", value: "-65%" },
+      { label: "State Stability", value: "100%" }
     ]
   }
 };

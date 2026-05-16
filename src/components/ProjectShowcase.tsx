@@ -66,9 +66,9 @@ const PROJECTS: ProjectData[] = [
     date: "2024",
     tags: ["FASTAPI", "OCR", "REACT NATIVE"],
     impacts: [
-      "Engineered multi-modal backend with Gemini 2.5 Flash.",
-      "Built robust OCR ingestion pipeline for PDF/Image parsing.",
-      "Implemented exponential backoff for API resilience."
+      "Decoupled heavy OCR/PDF logic into a dedicated microservice to avoid main API bloat.",
+      "Engineered a 'Cascading Wake-up' system to eliminate 30s cold-start delays on free-tier hosting.",
+      "Resolved complex Debian 12 library conflicts for Tesseract/Cairo in Docker environments."
     ],
     imageColor: "from-blue-950 via-slate-900 to-black",
     videoUrl: "/vakeelit.mp4",
@@ -141,6 +141,7 @@ function ProjectCard({ project, index, total, onExplore }: { project: ProjectDat
                 href={project.githubUrl}
                 target="_blank"
                 rel="noopener noreferrer"
+                title="View on GitHub"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 className="inline-flex items-center gap-3 px-8 py-4 md:px-8 md:py-4 lg:px-10 lg:py-5 bg-white/5 border border-white/10 text-white rounded-full text-[10px] md:text-[10px] lg:text-xs font-black tracking-widest uppercase hover:bg-white/10 transition-all"

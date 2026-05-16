@@ -20,9 +20,9 @@ const CAPABILITIES: Capability[] = [
     execution: "Optimized Similarity Search hit-rates to >98% by decoupling vector indexes from metadata payloads."
   },
   {
-    title: "Backend Reliability & Real-Time",
-    description: "Focusing on systems that don't fail silently. I build fault-tolerant APIs, write custom exception smuggling pipelines, and eliminate complex WebSocket race conditions for persistent state.",
-    execution: "Solved critical WebSocket hand-off bugs by bridging the React state-async gap with synchronous ref tracking."
+    title: "Backend Reliability & Microservices",
+    description: "Focusing on systems that don't fail silently. I build fault-tolerant APIs, architect 'Cascading Wake-up' loops to mask cold starts, and decouple heavy computation (OCR/PDF) into dedicated worker nodes.",
+    execution: "Optimized free-tier hosting UX by bridging the cold-start gap with asynchronous background service warming."
   },
   {
     title: "Performance & Interaction",
